@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: weather-app
+  template:
+    metadata:
+      labels:
+        app: weather-app
+    spec:
+      volumes:
+        - name: history-storage
+          persistentVolumeClaim:
+            claimName: ebs-claim
+      containers:
+      - name: weather-app
+        image: "{{ .Values.weatherApp.image.repository }}:{{ .Values.weatherApp.image.tag }}"
+        imagePullPolicy: {{ .Values.weatherApp.image.pullPolicy }}
+        ports:
+        - containerPort: 8000
+        env:
+        - name: BG_COLOR
+          valueFrom:
+            configMapKeyRef:
+              name: weather-app-blue-config
+              key: BG_COLOR
+        volumeMounts:
+          - mountPath: "/history"
+            name: history-storage

@@ -1,0 +1,19 @@
+replicaCount: 4
+
+weatherApp:
+  image:
+    pullPolicy: Always
+    repository: eilaytal/weatherapp-searchistory
+    tag: V1.0
+
+pvc:
+  name: weather-app-pvc
+  accessMode: ReadWriteOnce  # Change from ReadWriteMany to ReadWriteOnce
+  size: 1Gi
+  storageClassName: gp3
+
+solitaireApp:
+  image:
+    pullPolicy: Always
+    repository: chimenesjr/solitaire
+    tag: nginx
