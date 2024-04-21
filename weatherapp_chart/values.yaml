@@ -3,8 +3,8 @@ replicaCount: 4
 weatherApp:
   image:
     pullPolicy: Always
-    repository: eilaytal/weatherappsearchistory
-    tag: V1.25
+    repository: eilaytal/weatherapp-searchistory
+    tag: latest
 
 
 solitaireApp:
