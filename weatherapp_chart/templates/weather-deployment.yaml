@@ -12,10 +12,6 @@ spec:
       labels:
         app: weather-app
     spec:
-      volumes:
-        - name: history-storage
-          persistentVolumeClaim:
-            claimName: ebs-claim
       containers:
       - name: weather-app
         image: "{{ .Values.weatherApp.image.repository }}:{{ .Values.weatherApp.image.tag }}"
@@ -28,6 +24,4 @@ spec:
             configMapKeyRef:
               name: weather-app-blue-config
               key: BG_COLOR
-        volumeMounts:
-          - mountPath: "/history"
-            name: history-storage
+       
