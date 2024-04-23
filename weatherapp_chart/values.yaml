@@ -3,7 +3,7 @@ replicaCount: 4
 weatherApp:
   image:
     pullPolicy: Always
-    repository: eilaytal/weatherappsearchistory:V1.25
+    repository: eilaytal/weatherappsearchistory:latest
     tag: latest
 
 
