@@ -22,6 +22,6 @@ spec:
         - name: BG_COLOR
           valueFrom:
             configMapKeyRef:
-              name: weather-app-blue-config
+              name: weather-app-green-config
               key: BG_COLOR
        
