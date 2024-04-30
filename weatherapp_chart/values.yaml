@@ -4,5 +4,5 @@ replicaCount: 4
 weatherApp:
   image:
     repository: eilaytal/weatherappsearchistory
-    tag: V1.25  # Specify the correct version tag
+    tag: "V1.34"
     pullPolicy: Always
