@@ -4,6 +4,12 @@
 ## Overview
 This repository contains Kubernetes manifests and Helm charts for deploying the Weather App.
 
+## Related Repositories
+
+- [Weather App EKS Terraform](https://github.com/eilaytal/weather-app-eks-terraform): Terraform configuration for deploying the Weather App on AWS EKS.
+- [Jenkins Pipeline](https://github.com/eilaytal/jenkins_pipeline): Jenkins pipeline for automating CI/CD processes for the Weather App.
+- [Weather App](https://github.com/eilaytal/weather-app): The main repository containing the Weather App source code.
+
 ## Directory Structure
 
 ### `weatherapp_chart/`
