@@ -26,11 +26,11 @@ spec:
           service:
             name: weather-service
             port:
-              number: 32300  # Assuming your service is listening on port 80
+              number: 32300
       - path: /*
         pathType: ImplementationSpecific
         backend:
           service:
             name: solitaire-service
             port:
-              number: 32400  # Assuming your service is listening on port 80
+              number: 32400
